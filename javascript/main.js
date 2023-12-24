@@ -1769,10 +1769,22 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
             backdrop-filter: saturate(120%) blur(4px);
             box-shadow: none;
 
+            .description {
+              line-height: 1.3;
+
+              a {
+                display: inline-block;
+                width: 100%;
+                padding-top: 4px;
+                font-weight: 400;
+              }
+            }
+
             .name {
               font-size: var(--text-lg);
-              word-break: break-word;
               line-break: auto;
+              line-height: 1.1;
+              word-break: break-word;
             }
 
             &:hover {
@@ -2547,18 +2559,18 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
       }
     `,quicksettings:t`
       #quicksettings {
+        align-items: start;
+        padding: 8px 16px !important;
+
         > div {
           padding-top: 16px !important;
         }
 
-        align-items: start;
-        padding: 8px 16px !important;
-
         fieldset {
           &.gradio-radio {
             padding: 8px !important;
-            border-radius: ${r.borderRadius}px;
             background: ${r.colorFillTertiary};
+            border-radius: ${r.borderRadius}px;
           }
         }
       }

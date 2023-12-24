@@ -149,8 +149,20 @@ export const useStyles = createStyles(
             backdrop-filter: saturate(120%) blur(4px);
             box-shadow: none;
 
+            .description {
+              line-height: 1.3;
+
+              a {
+                display: inline-block;
+                width: 100%;
+                padding-top: 4px;
+                font-weight: 400;
+              }
+            }
+
             .name {
               font-size: var(--text-lg);
+              line-height: 1.1;
               word-break: break-word;
               line-break: auto;
             }
