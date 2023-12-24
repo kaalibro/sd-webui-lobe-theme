@@ -223,7 +223,7 @@ export const useStyles = createStyles(
       textarea {
         resize: none;
         overflow-y: hidden !important;
-        font-family: ${token.fontFamily};
+        font-family: var(--font);
       }
     `,
     container: css`

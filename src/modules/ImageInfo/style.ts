@@ -16,7 +16,7 @@ export const useStyles = createStyles(({ css, token, isDarkMode }) => {
     container: css`
       padding: 16px 10px 16px 24px;
 
-      font-family: ${token.fontFamilyCode};
+      font-family: var(--font-mono);
       font-size: 13px;
 
       background: ${token.colorFillTertiary};
@@ -24,7 +24,7 @@ export const useStyles = createStyles(({ css, token, isDarkMode }) => {
     `,
     highlight: css`
       pre {
-        font-family: ${token.fontFamilyCode} !important;
+        font-family: var(--font-mono) !important;
         font-size: 13px !important;
         line-height: 1.5 !important;
         word-wrap: break-word !important;

@@ -25,7 +25,7 @@ export default (token: Theme) => {
       .autocompleteResults {
         min-width: 400px;
 
-        font-family: ${token.fontFamilyCode};
+        font-family: var(--font-mono);
         font-size: 12px;
 
         background: ${token.colorBgElevated} !important;

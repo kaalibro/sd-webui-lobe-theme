@@ -3,6 +3,10 @@ import { readableColor } from 'polished';
 
 export default (token: Theme) => {
   return css`
+    :focus-visible {
+      outline: none;
+    }
+
     .gradio-group,
     .gradio-row {
       gap: 12px !important;

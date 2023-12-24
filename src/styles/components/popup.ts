@@ -30,7 +30,7 @@ export default (token: Theme) => css`
         max-height: 85vh;
         padding: 32px;
 
-        font-family: ${token.fontFamilyCode};
+        font-family: var(--font-mono);
         color: ${token.colorText};
         word-break: break-word;
 

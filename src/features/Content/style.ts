@@ -181,8 +181,7 @@ export const useStyles = createStyles(
 
             padding: 8px !important;
 
-            font-family: ${token.fontFamilyCode} !important;
-            font-size: 13px !important;
+            font-family: var(--font) !important;
             line-height: 1.5 !important;
             word-wrap: break-word !important;
             white-space: pre-wrap !important;
@@ -193,19 +192,27 @@ export const useStyles = createStyles(
           }
         }
 
+        [id$='2img_prompt'] textarea {
+          font-size: var(--text-lg) !important;
+        }
+
+        [id$='2img_neg_prompt'] textarea {
+          font-size: 14px !important;
+        }
+
         [id$='2img_prompt'] > label > textarea {
-          color: ${token.colorSuccessTextHover};
+          color: var(--body-text-color);
 
           &:focus {
-            color: ${token.colorSuccessText};
+            color: var(--body-text-color);
           }
         }
 
         [id$='2img_neg_prompt'] > label > textarea {
-          color: ${token.colorErrorTextHover};
+          color: ${token.colorWarningTextHover};
 
           &:focus {
-            color: ${token.colorError};
+            color: ${token.colorWarning};
           }
         }
 
@@ -417,6 +424,16 @@ export const useStyles = createStyles(
           .image-buttons,
           .image_buttons_extras {
             gap: 8px !important;
+          }
+
+          [id^='download_files_'] {
+            .hide {
+              display: none;
+            }
+
+            .file-preview-holder table.file-preview {
+              margin-top: 0;
+            }
           }
         }
 

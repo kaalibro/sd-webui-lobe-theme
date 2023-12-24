@@ -40,4 +40,8 @@ export default (token: Theme) => css`
       background: ${token.colorPrimaryActive} !important;
     }
   }
+
+  [class^='ant-'] {
+    font-family: var(--font);
+  }
 `;

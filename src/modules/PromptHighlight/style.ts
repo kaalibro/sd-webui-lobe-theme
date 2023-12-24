@@ -10,8 +10,8 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
       padding: calc(8px + var(--input-border-width));
 
       pre {
-        font-family: ${token.fontFamilyCode} !important;
-        font-size: 13px !important;
+        font-family: var(--font) !important;
+        font-size: var(--text-lg) !important;
         line-height: 1.5 !important;
         word-wrap: break-word !important;
         white-space: pre-wrap !important;
@@ -33,7 +33,7 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
         height: 34px;
         padding: 0 8px;
 
-        font-family: ${token.fontFamilyCode};
+        font-family: var(--font-mono);
         color: ${token.colorTextTertiary};
 
         border-radius: ${token.borderRadius};
@@ -51,7 +51,9 @@ export const useStyles = createStyles(({ css, token, cx, stylish, prefixCls }) =
 
           code,
           code span {
-            font-family: ${token.fontFamilyCode} !important;
+            font-family: var(--font) !important;
+            font-feature-settings: normal;
+            font-variation-settings: normal;
           }
         }
       `,
