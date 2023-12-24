@@ -46,6 +46,14 @@ export default (token: Theme) => {
     }
 
     .block.gradio-gallery {
+      .preview {
+        background: ${token.colorBgContainer};
+
+        img[data-testid='detailed-image'] {
+          padding-top: ${token.paddingXS}px;
+        }
+      }
+
       .thumbnail-item {
         position: unset;
         background: ${token.colorBgContainer} !important;
@@ -73,11 +81,6 @@ export default (token: Theme) => {
           transform: none;
           box-shadow: 0 0 0 1px ${token.colorBorder};
         }
-      }
-
-      > .grid-wrap {
-        margin: -52px;
-        padding: 60px;
       }
     }
 

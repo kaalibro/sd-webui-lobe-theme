@@ -403,7 +403,6 @@ export const useStyles = createStyles(
 
           #txt2img_gallery {
             overflow: hidden !important;
-            border-radius: var(--border-radius) !important;
           }
 
           [id$='2img_tools'] > div {
