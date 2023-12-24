@@ -66,7 +66,7 @@ export default (token: Theme) => {
         }
 
         &.thumbnail-lg {
-          border-radius: 5px;
+          border-radius: ${token.borderRadius}px;
           transition: var(--button-transition);
         }
 

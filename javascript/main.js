@@ -796,7 +796,7 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
         }
 
         &.thumbnail-lg {
-          border-radius: 5px;
+          border-radius: ${e.borderRadius}px;
           transition: var(--button-transition);
         }
 
@@ -2547,8 +2547,20 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
       }
     `,quicksettings:t`
       #quicksettings {
+        > div {
+          padding-top: 16px !important;
+        }
+
         align-items: start;
-        padding: 16px !important;
+        padding: 8px 16px !important;
+
+        fieldset {
+          &.gradio-radio {
+            padding: 8px !important;
+            border-radius: ${r.borderRadius}px;
+            background: ${r.colorFillTertiary};
+          }
+        }
       }
     `,sidebar:t`
       height: calc(100vh - ${i}px);

@@ -58,7 +58,19 @@ export const useStyles = createStyles(
     quicksettings: css`
       #quicksettings {
         align-items: start;
-        padding: 16px !important;
+        padding: 8px 16px !important;
+
+        > div {
+          padding-top: 16px !important;
+        }
+
+        fieldset {
+          &.gradio-radio {
+            padding: 8px !important;
+            background: ${token.colorFillTertiary};
+            border-radius: ${token.borderRadius}px;
+          }
+        }
       }
     `,
     sidebar: css`
