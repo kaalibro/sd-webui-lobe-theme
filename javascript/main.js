@@ -262,10 +262,6 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
     }
   }
 
-  body {
-    height: 100% !important;
-  }
-
   .ant-slider-track,
   .ant-tabs-ink-bar,
   .ant-switch-checked {
@@ -454,10 +450,6 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
   `,Bne=e=>tH`
     :focus-visible {
       outline: none;
-    }
-
-    body {
-      height: 100vh !important;
     }
 
     .gradio-group,

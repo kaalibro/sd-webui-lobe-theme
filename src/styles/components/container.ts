@@ -7,10 +7,6 @@ export default (token: Theme) => {
       outline: none;
     }
 
-    body {
-      height: 100vh !important;
-    }
-
     .gradio-group,
     .gradio-row {
       gap: 12px !important;
