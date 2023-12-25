@@ -1020,8 +1020,6 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
   }
 `,Gne=e=>tH`
   .global-popup {
-    overscroll-behavior: none;
-
     .global-popup-close {
       background-color: ${e.colorBgMask} !important;
       backdrop-filter: blur(4px);
@@ -1042,7 +1040,6 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
 
       .popup-metadata {
         overflow: auto;
-        overscroll-behavior: none;
 
         width: 75vw;
         max-height: 85vh;
@@ -1077,7 +1074,6 @@ var Fne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
 
       .popup-dialog,
       .edit-user-metadata {
-        overscroll-behavior: none;
         width: 50vw !important;
       }
     }
