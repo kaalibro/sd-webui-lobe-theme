@@ -75,6 +75,18 @@ export const useStyles = createStyles(
     `,
     sidebar: css`
       height: calc(100vh - ${headerHeight}px);
+
+      .draggable-panel {
+        .draggable-panel-toggle > div {
+          top: unset;
+          height: 50%;
+        }
+
+        input {
+          margin: 0;
+          padding: 0;
+        }
+      }
     `,
   }),
 );

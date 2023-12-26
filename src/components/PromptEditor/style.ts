@@ -5,5 +5,10 @@ export const useStyles = createStyles(({ css }) => ({
     display: flex;
     flex-direction: column;
     gap: 8px;
+
+    button {
+      color: var(--button-secondary-text-color);
+      transition: var(--button-transition);
+    }
   `,
 }));

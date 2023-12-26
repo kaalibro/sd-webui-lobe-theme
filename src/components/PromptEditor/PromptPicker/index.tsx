@@ -89,10 +89,10 @@ const PromptPicker = memo(() => {
                 setActiveAttribute(Object.keys(data[key].children)[0]);
               }}
               size={'small'}
-              style={{ flex: 1 }}
+              // style={{ flex: 1 }}
               type={isActive ? 'primary' : 'default'}
             >
-              {name}
+              <span style={isActive ? { color: '#fff' } : { color: '#aaa' }}>{name}</span>
             </Button>
           );
         })}
@@ -108,10 +108,10 @@ const PromptPicker = memo(() => {
                 key={key}
                 onClick={() => setActiveAttribute(key)}
                 size={'small'}
-                style={{ flex: 1 }}
+                // style={{ flex: 1 }}
                 type={isActive ? 'primary' : 'default'}
               >
-                {name}
+                <span style={isActive ? { color: '#fff' } : { color: '#aaa' }}>{name}</span>
               </Button>
             );
           })}
@@ -130,7 +130,7 @@ const PromptPicker = memo(() => {
                   key={key}
                   onClick={() => handleTagUpdate({ id: key, text: value.name })}
                   size={'small'}
-                  style={isCN ? { flex: 1, height: 36 } : { flex: 1 }}
+                  // style={isCN ? { flex: 1, height: 36 } : { flex: 1 }}
                   type={isActive ? 'primary' : 'dashed'}
                 >
                   {isCN ? (
@@ -141,7 +141,9 @@ const PromptPicker = memo(() => {
                       <div style={{ fontSize: 12, lineHeight: 1, opacity: 0.75 }}>{value.name}</div>
                     </Flexbox>
                   ) : (
-                    value.name
+                    <span style={isActive ? { color: '#fff' } : { color: '#aaa' }}>
+                      {value.name}
+                    </span>
                   )}
                 </Button>
               );

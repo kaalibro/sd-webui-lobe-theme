@@ -43,7 +43,7 @@ export const useStyles = createStyles(
     .ReactTags__tags.react-tags-wrapper {
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 8px;
     }
 
     .ReactTags__selected {
@@ -62,13 +62,15 @@ export const useStyles = createStyles(
         font-size: 13px;
         color: ${type === 'positive' ? token.colorSuccessTextHover : token.colorErrorTextHover};
 
-        background: ${token.colorFillSecondary};
+        background: ${token.colorFillQuaternary};
         border: 1px solid ${token.colorBorderSecondary};
         border-radius: ${token.borderRadius}px;
 
+        transition: var(--button-transition);
+
         &:hover {
           color: ${type === 'positive' ? token.colorSuccessText : token.colorErrorText};
-          background: ${token.colorFill};
+          background: ${token.colorFillSecondary};
           border: 1px solid ${token.colorBorder};
         }
       }
@@ -76,7 +78,7 @@ export const useStyles = createStyles(
       a.ReactTags__remove {
         cursor: pointer;
         margin-left: 5px;
-        color: #aaa;
+        color: ${token.colorFillSecondary};
       }
     }
 
