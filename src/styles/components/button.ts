@@ -94,12 +94,14 @@ export default (token: Theme) => css`
 
       &[id$='_skip'] {
         min-width: 0;
-        background: ${token.colorBorderSecondary} !important;
+        background: ${token.colorErrorBorder};
+        border: 1px solid ${token.colorErrorBorder};
         border-radius: 0 ${token.borderRadius}px ${token.borderRadius}px 0 !important;
 
         &:hover,
         &:active {
-          background: ${token.colorBorder} !important;
+          background: ${token.colorErrorBorderHover} !important;
+          border: 1px solid ${token.colorErrorBorderHover};
         }
       }
 

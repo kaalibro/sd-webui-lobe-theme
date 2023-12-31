@@ -380,12 +380,14 @@ var Nne='<svg\n  class="lucide lucide-arrow-right"\n  xmlns="http://www.w3.org/2
 
       &[id$='_skip'] {
         min-width: 0;
-        background: ${e.colorBorderSecondary} !important;
+        background: ${e.colorErrorBorder};
+        border: 1px solid ${e.colorErrorBorder};
         border-radius: 0 ${e.borderRadius}px ${e.borderRadius}px 0 !important;
 
         &:hover,
         &:active {
-          background: ${e.colorBorder} !important;
+          background: ${e.colorErrorBorderHover} !important;
+          border: 1px solid ${e.colorErrorBorderHover};
         }
       }
 
