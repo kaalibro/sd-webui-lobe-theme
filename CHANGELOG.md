@@ -2,6 +2,106 @@
 
 # Changelog
 
+### [Version 3.4.9](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.8...v3.4.9)
+
+<sup>Released on **2024-01-15**</sup>
+
+#### 💄 Styles
+
+- **misc**: Add svg icon for "Create an upscaled version of the current image".
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Add svg icon for "Create an upscaled version of the current image" ([688a874](https://github.com/lobehub/sd-webui-lobe-theme/commit/688a874))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 3.4.8](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.7...v3.4.8)
+
+<sup>Released on **2024-01-15**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: ComfyUI extension canvas height.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: ComfyUI extension canvas height, closes [#516](https://github.com/lobehub/sd-webui-lobe-theme/issues/516) ([4111c01](https://github.com/lobehub/sd-webui-lobe-theme/commit/4111c01))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 3.4.7](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.6...v3.4.7)
+
+<sup>Released on **2024-01-14**</sup>
+
+#### 🐛 Bug Fixes
+
+- **misc**: Fix extranetwork loading.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### What's fixed
+
+- **misc**: Fix extranetwork loading ([0be4a24](https://github.com/lobehub/sd-webui-lobe-theme/commit/0be4a24))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
+### [Version 3.4.6](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.5...v3.4.6)
+
+<sup>Released on **2024-01-14**</sup>
+
+#### 💄 Styles
+
+- **misc**: Update lucide-static and fix some style problem.
+
+<br/>
+
+<details>
+<summary><kbd>Improvements and Fixes</kbd></summary>
+
+#### Styles
+
+- **misc**: Update lucide-static and fix some style problem ([2a651f6](https://github.com/lobehub/sd-webui-lobe-theme/commit/2a651f6))
+
+</details>
+
+<div align="right">
+
+[![](https://img.shields.io/badge/-BACK_TO_TOP-151515?style=flat-square)](#readme-top)
+
+</div>
+
 ### [Version 3.4.5](https://github.com/lobehub/sd-webui-lobe-theme/compare/v3.4.4...v3.4.5)
 
 <sup>Released on **2023-12-26**</sup>
