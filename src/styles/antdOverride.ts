@@ -39,6 +39,6 @@ export default (token: Theme) => css`
   }
 
   [class^='ant-'] {
-    font-family: var(--font);
+    font-family: var(--font) !important;
   }
 `;

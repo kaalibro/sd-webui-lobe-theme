@@ -248,7 +248,6 @@ const le={attribute:!0,type:String,converter:v,reflect:!1,hasChanged:y},se=(e=le
   .ant-app {
     position: relative;
     overscroll-behavior: none;
-
     font-family: var(--font) !important;
 
     ::-webkit-scrollbar {
@@ -280,13 +279,12 @@ const le={attribute:!0,type:String,converter:v,reflect:!1,hasChanged:y},se=(e=le
   }
 
   [class^='ant-'] {
-    font-family: var(--font);
+    font-family: var(--font) !important;
   }
 `,mre=e=>NH`
   button {
     cursor: pointer;
     min-width: fit-content !important;
-
     font-family: inherit;
 
     &.gradio-button {
@@ -2207,8 +2205,8 @@ const le={attribute:!0,type:String,converter:v,reflect:!1,hasChanged:y},se=(e=le
               a {
                 display: inline-block;
                 width: 100%;
-                font-weight: 400;
                 font-size: ${t.fontSizeSM}px;
+                font-weight: 400;
               }
 
               a:hover {
@@ -2255,9 +2253,7 @@ const le={attribute:!0,type:String,converter:v,reflect:!1,hasChanged:y},se=(e=le
 
           > button {
             cursor: pointer;
-
             zoom: 0.8;
-
             min-width: 100px;
             margin: 0;
           }
