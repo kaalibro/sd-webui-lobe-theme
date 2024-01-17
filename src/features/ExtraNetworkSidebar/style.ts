@@ -174,6 +174,13 @@ export const useStyles = createStyles(
               display: none;
             }
           }
+
+          .gradio-button {
+            &[id$='_extra_sortorder'],
+            &[id$='_extra_refresh'] {
+              align-self: center;
+            }
+          }
         }
 
         .extra-network-subdirs {

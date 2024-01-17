@@ -7,6 +7,15 @@ export default (token: Theme) => {
       outline: none;
     }
 
+    header,
+    button,
+    .gradio-accordion .label-wrap span,
+    .gradio-dropdown.multiselect,
+    .gradio-image,
+    .token-counter {
+      user-select: none;
+    }
+
     .gradio-group,
     .gradio-row {
       gap: 12px !important;
