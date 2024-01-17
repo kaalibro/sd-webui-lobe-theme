@@ -34,7 +34,7 @@ export const useStyles = createStyles(
 
         [id^='html_info_']:has(div.prose) {
           p {
-            color: ${token.colorTextDescription} !important;
+            color: ${token.colorTextSecondary} !important;
           }
         }
 

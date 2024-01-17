@@ -8,6 +8,7 @@ export default (token: Theme) => css`
   .ant-app {
     position: relative;
     overscroll-behavior: none;
+    font-family: var(--font) !important;
 
     ::-webkit-scrollbar {
       display: none;

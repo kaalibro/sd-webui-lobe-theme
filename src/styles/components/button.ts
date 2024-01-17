@@ -4,6 +4,7 @@ export default (token: Theme) => css`
   button {
     cursor: pointer;
     min-width: fit-content !important;
+    font-family: inherit;
 
     &.gradio-button {
       &.tool:not(.hidden) {

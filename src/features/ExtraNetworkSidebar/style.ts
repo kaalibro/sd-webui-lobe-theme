@@ -53,6 +53,102 @@ export const useStyles = createStyles(
           display: flex;
           flex-direction: column;
         }
+
+        .card {
+          overflow: hidden;
+
+          width: 100% !important;
+          height: ${size * 1.5}px !important;
+          margin: 0 !important;
+
+          background-size: cover;
+          border: 1px solid ${token.colorBorderSecondary};
+          border-radius: ${token.borderRadiusSM}px;
+          outline: none;
+
+          transition:
+            box-shadow 200ms ${token.motionEaseOut},
+            scale 100ms ${token.motionEaseOut};
+
+          .name {
+            font-size: var(--text-sm) !important;
+          }
+
+          &:hover {
+            border-color: ${token.colorPrimary};
+            box-shadow: 0 0 0 1px ${token.colorPrimary};
+
+            .additional {
+              display: flex !important;
+            }
+
+            .name {
+              word-break: break-word;
+              line-break: auto;
+              white-space: unset;
+            }
+          }
+
+          &:active {
+            scale: 0.95;
+          }
+
+          .actions {
+            background: rgb(0 0 0 / 30%);
+            backdrop-filter: saturate(120%) blur(4px);
+            box-shadow: none !important;
+
+            .name {
+              overflow: hidden;
+              display: block;
+
+              font-weight: bold;
+              text-overflow: ellipsis;
+              text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
+              white-space: nowrap;
+            }
+
+            .additional {
+              position: absolute;
+              display: none;
+
+              > ul {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                margin: 0;
+                padding: 0;
+
+                a {
+                  margin: 0 !important;
+                  padding: 0 !important;
+
+                  font-size: var(--text-md) !important;
+                  color: #fff;
+                  text-overflow: ellipsis;
+                  text-shadow: 1px 1px black;
+                  white-space: nowrap;
+                }
+              }
+            }
+
+            .description {
+              max-height: none;
+
+              a {
+                display: inline-block;
+                width: 100%;
+                font-size: ${token.fontSizeSM}px;
+                font-weight: 400;
+              }
+
+              a:hover {
+                color: var(--link-text-color-hover);
+              }
+            }
+          }
+        }
       }
 
       .extra-networks {
@@ -91,100 +187,9 @@ export const useStyles = createStyles(
 
           > button {
             cursor: pointer;
-
             zoom: 0.8;
-
-            flex: 1;
-
             min-width: 100px;
             margin: 0;
-          }
-        }
-
-        .actions {
-          background: rgb(0 0 0 / 30%);
-          backdrop-filter: saturate(120%) blur(4px);
-          box-shadow: none !important;
-
-          .name {
-            overflow: hidden;
-            display: block;
-
-            font-weight: bold;
-            text-overflow: ellipsis;
-            text-shadow: 0 1px 1px rgb(0 0 0 / 90%);
-            white-space: nowrap;
-          }
-
-          .additional {
-            position: absolute;
-            display: none;
-
-            > ul {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              margin: 0;
-              padding: 0;
-
-              a {
-                margin: 0 !important;
-                padding: 0 !important;
-
-                font-size: var(--text-md) !important;
-                color: #fff;
-                text-overflow: ellipsis;
-                text-shadow: 1px 1px black;
-                white-space: nowrap;
-              }
-            }
-          }
-
-          .description {
-            a:hover {
-              color: var(--link-text-color-hover);
-            }
-          }
-        }
-
-        .card {
-          overflow: hidden;
-
-          width: 100% !important;
-          height: ${size * 1.5}px !important;
-          margin: 0 !important;
-
-          background-size: cover;
-          border: 1px solid ${token.colorBorderSecondary};
-          border-radius: ${token.borderRadiusSM}px;
-          outline: none;
-
-          transition:
-            box-shadow 200ms ${token.motionEaseOut},
-            scale 400ms ${token.motionEaseOut};
-
-          .name {
-            font-size: var(--text-sm) !important;
-          }
-
-          &:hover {
-            border-color: ${token.colorPrimary};
-            box-shadow: 0 0 0 1px ${token.colorPrimary};
-
-            .additional {
-              display: flex !important;
-            }
-
-            .name {
-              word-break: break-word;
-              line-break: auto;
-              white-space: unset;
-            }
-          }
-
-          &:active {
-            scale: 0.9;
           }
         }
 

@@ -60,7 +60,7 @@ export const useStyles = createStyles(
         padding: 6px 6px 6px 8px;
 
         font-size: 13px;
-        color: ${type === 'positive' ? token.colorSuccessTextHover : token.colorErrorTextHover};
+        color: ${type === 'positive' ? token.colorSuccessText : token.colorErrorTextHover};
 
         background: ${token.colorFillQuaternary};
         border: 1px solid ${token.colorBorderSecondary};
@@ -69,7 +69,7 @@ export const useStyles = createStyles(
         transition: var(--button-transition);
 
         &:hover {
-          color: ${type === 'positive' ? token.colorSuccessText : token.colorErrorText};
+          color: ${type === 'positive' ? token.colorSuccessTextHover : token.colorErrorText};
           background: ${token.colorFillSecondary};
           border: 1px solid ${token.colorBorder};
         }
