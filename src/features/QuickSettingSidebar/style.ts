@@ -13,7 +13,8 @@ export const useStyles = createStyles(
 
       .ant-segmented {
         .ant-segmented-group .ant-segmented-item.ant-segmented-item-selected {
-          background-color: ${token.colorFillQuaternary};
+          background-color: ${token.colorFillTertiary};
+          box-shadow: none;
         }
       }
 

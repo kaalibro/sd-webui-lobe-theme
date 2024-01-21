@@ -1,7 +1,7 @@
 import { Form } from '@lobehub/ui';
 import { Switch } from 'antd';
 import isEqual from 'fast-deep-equal';
-import { Puzzle, TextCursorInput } from 'lucide-react';
+import { TextCursorInput } from 'lucide-react';
 import { memo, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 
@@ -19,23 +19,6 @@ const SettingForm = memo(() => {
     onSetSetting(value);
     location.reload();
   }, []);
-
-  const experimental: SettingItemGroup = useMemo(
-    () => ({
-      children: [
-        {
-          children: <Switch />,
-          desc: t('setting.imageInfo.desc'),
-          label: t('setting.imageInfo.title'),
-          name: 'enableImageInfo',
-          valuePropName: 'checked',
-        },
-      ],
-      icon: Puzzle,
-      title: t('setting.group.experimental'),
-    }),
-    [],
-  );
 
   const promptTextarea: SettingItemGroup = useMemo(
     () => ({
@@ -65,7 +48,7 @@ const SettingForm = memo(() => {
     <Form
       id="theme_settings"
       initialValues={setting}
-      items={[experimental, promptTextarea]}
+      items={[promptTextarea]}
       onFinish={onFinish}
       style={{ flex: 1 }}
     />

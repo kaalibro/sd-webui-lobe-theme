@@ -1,5 +1,5 @@
 import { ActionIcon, DraggablePanelBody, DraggablePanelFooter } from '@lobehub/ui';
-import { Skeleton, Slider } from 'antd';
+import { Slider } from 'antd';
 import isEqual from 'fast-deep-equal';
 import { ZoomIn, ZoomOut } from 'lucide-react';
 import { memo, useState } from 'react';
@@ -7,7 +7,6 @@ import { memo, useState } from 'react';
 import { selectors, useAppStore } from '@/store';
 
 import { useStyles } from './style';
-import { useCivitaiHelperFix } from './useCivitaiHelperFix';
 import { useInjectExtraNetwork } from './useInjectExtraNetwork';
 
 const Inner = memo(() => {
@@ -18,15 +17,10 @@ const Inner = memo(() => {
   const [size, setSize] = useState<number>(setting.extraNetworkCardSize || 86);
   const { styles } = useStyles({ size });
 
-  const { isLoading } = useCivitaiHelperFix({
-    debug: '[layout] inject - ExtraNetworkSidebar',
-  });
-
   return (
     <>
       <DraggablePanelBody className={styles.body}>
-        {isLoading && <Skeleton active />}
-        <div style={isLoading ? { display: 'none' } : {}}>
+        <div>
           <div
             id="txt2img-extra-network-sidebar"
             ref={txt2imgExtraNetworkSidebarReference}

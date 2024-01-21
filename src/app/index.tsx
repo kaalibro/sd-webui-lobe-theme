@@ -2,9 +2,7 @@ import { LayoutHeader, LayoutMain, LayoutSidebar } from '@lobehub/ui';
 import isEqual from 'fast-deep-equal';
 import { memo, useEffect } from 'react';
 
-import PromptFormator from '@/features/PromptFormator';
 import '@/locales/config';
-import ImageInfo from '@/modules/ImageInfo/page';
 import PromptHighlight from '@/modules/PromptHighlight/page';
 import replaceIcon from '@/scripts/replaceIcon';
 import { selectors, useAppStore } from '@/store';
@@ -15,7 +13,6 @@ import ExtraNetworkSidebar from '../features/ExtraNetworkSidebar';
 import Footer from '../features/Footer';
 import Header from '../features/Header';
 import QuickSettingSidebar from '../features/QuickSettingSidebar';
-import Share from '../features/Share';
 import { useStyles } from './style';
 
 export const HEADER_HEIGHT = 64;
@@ -29,7 +26,6 @@ const Index = memo(() => {
 
   useEffect(() => {
     if (setting.enableHighlight) PromptHighlight();
-    if (setting.enableImageInfo) ImageInfo();
     if (setting.svgIcon) replaceIcon();
   }, []);
 
@@ -51,8 +47,6 @@ const Index = memo(() => {
           </LayoutSidebar>
         )}
         <Content className={cx(!setting.enableSidebar && styles.quicksettings)} />
-        <PromptFormator />
-        <Share />
         {setting?.enableExtraNetworkSidebar && (
           <LayoutSidebar
             className={styles.sidebar}
