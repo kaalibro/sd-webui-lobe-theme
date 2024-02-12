@@ -11,6 +11,7 @@ import {
   Book,
   Box,
   Brush,
+  Clapperboard,
   ClipboardList,
   CornerRightUp,
   Dices,
@@ -82,6 +83,7 @@ export default () => {
     replaceIcon(button, ['📦'], Box, 16);
     replaceIcon(button, ['💞'], Share2, 16);
     replaceIcon(button, ['✨'], Scaling, 16);
+    replaceIcon(button, ['🎬'], Clapperboard, 16);
   }
 
   for (const span of document.querySelectorAll('span')) {
