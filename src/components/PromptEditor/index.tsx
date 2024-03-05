@@ -3,7 +3,6 @@ import { memo, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Flexbox } from 'react-layout-kit';
 
-import PromptPicker from '@/components/PromptEditor/PromptPicker';
 import replaceIcon from '@/scripts/replaceIcon';
 import { selectors, useAppStore } from '@/store';
 
@@ -27,7 +26,6 @@ const PromptEditor = memo(() => {
           <Prompt type="negative" />
         </>
       )}
-      <PromptPicker />
     </Flexbox>
   );
 });
