@@ -65,10 +65,13 @@ export default (token: Theme) => {
       [id*='_adetailer_ad_mask_preprocessing_accordion'].block.padded.gradio-accordion,
       [id*='_adetailer_ad_inpainting_accordion'].block.padded.gradio-accordion {
         margin: var(--spacing-lg) 0 !important;
+        padding: 16px !important;
+        border: 1px solid var(--block-border-color) !important;
 
         .label-wrap.open {
           margin-bottom: 0;
           padding-bottom: 8px;
+          border-bottom: 0;
         }
       }
 
@@ -95,9 +98,23 @@ export default (token: Theme) => {
         }
       }
 
+      /* SD Forge ControlNet Integrated */
+      #controlnet.controlnet .input-accordion {
+        flex: 1 1 100%;
+        padding: 16px !important;
+        border: 1px solid var(--block-border-color) !important;
+
+        .label-wrap.open {
+          border-bottom: 0;
+        }
+      }
+
       /* Aspect Ratio selector */
       [id$='2img_container_aspect_ratio'] {
+        gap: 0.5em !important;
+
         padding: 16px;
+
         background-color: ${token.colorBgContainer};
         border: 1px solid var(--block-border-color);
         border-radius: ${token.borderRadius}px;
@@ -106,11 +123,28 @@ export default (token: Theme) => {
           display: none;
         }
 
+        [id$='2img_row_aspect_ratio'] {
+          button {
+            min-width: fit-content !important;
+            padding: 0 16px;
+          }
+        }
+
+        [id$='2img_row_resolutions'] {
+          gap: 0.5em !important;
+
+          button {
+            flex-grow: 0;
+            min-width: fit-content !important;
+            padding: 0 16px;
+          }
+        }
+
         button[id$='_calculator_button'] {
           max-width: fit-content !important;
-          height: var(--button-lg-tool-height) !important;
+          height: unset !important;
           min-height: var(--button-lg-tool-height) !important;
-          max-height: var(--button-lg-tool-height) !important;
+          max-height: unset !important;
           padding: 0 1.25em !important;
 
           font-size: var(--text-md);
@@ -134,11 +168,6 @@ export default (token: Theme) => {
             justify-content: space-between;
           }
         }
-      }
-
-      [id$='2img_container_aspect_ratio'],
-      [id$='2img_row_resolutions'] {
-        gap: 0.5em !important;
       }
 
       /* Inpaint Anything */
