@@ -426,6 +426,10 @@ export const useStyles = createStyles(
             }
           }
 
+          [id$='2img_styles_edit_button'] {
+            align-self: start !important;
+          }
+
           .gradio-html[id^='img2img_label_copy_to'] {
             display: none;
           }
