@@ -1,15 +1,9 @@
 import { createStyles } from 'antd-style';
 
 export const useStyles = createStyles(
-  ({ css, token }, { headerHeight = 64, width }: { headerHeight?: number; width: number }) => ({
+  ({ css, token }, { headerHeight = 64 }: { headerHeight?: number; width: number }) => ({
     container: css`
       height: calc(100vh - ${headerHeight}px);
-
-      ul.options {
-        > li {
-          max-width: ${width - 48}px;
-        }
-      }
 
       .ant-segmented {
         .ant-segmented-group .ant-segmented-item.ant-segmented-item-selected {

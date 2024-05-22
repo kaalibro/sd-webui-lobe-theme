@@ -23,8 +23,10 @@ export default (token: Theme) => css`
     button {
       cursor: pointer;
 
-      display: block;
+      display: flex;
       flex: 1 !important;
+      align-items: center;
+      justify-content: center;
 
       min-width: 100px;
       padding: 8px !important;

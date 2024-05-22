@@ -25,45 +25,46 @@ export default (token: Theme) => {
 
       /* autocomplete */
       .autocompleteResults {
-        min-width: 400px;
-
-        font-family: var(--font-mono);
-        font-size: 12px;
-
         background: ${token.colorBgElevated} !important;
         border-color: ${token.colorBorder} !important;
         border-radius: ${token.borderRadius}px !important;
-        box-shadow: ${token.boxShadow};
+        box-shadow: var(--thumbnail-shadow);
 
-        ul {
+        ul.autocompleteResultsList {
+          min-width: 300px;
           padding: 0 !important;
-        }
 
-        li {
-          border-bottom: 1px solid ${token.colorBorder};
+          li {
+            &:hover,
+            &.selected {
+              background: ${token.colorFillTertiary};
+            }
 
-          &:hover {
-            background: ${token.colorFillSecondary} !important;
-          }
+            &:nth-of-type(odd):not(.selected) {
+              background: transparent;
 
-          &:nth-of-type(odd) {
-            background: transparent !important;
-
-            &:hover {
-              background: ${token.colorFillSecondary} !important;
+              &:hover {
+                background: ${token.colorFillTertiary};
+              }
             }
           }
         }
       }
 
       /* ADetailer */
-      [id*='img_adetailer_ad_toprow_prompt'] {
+      div:has(> [id$='img_adetailer_ad_main_accordion']),
+      div:has(> [id$='img_adetailer_ad_toprow_prompt']),
+      [id$='img_adetailer_ad_main_accordion'] div:has(> .tabs.gradio-tabs) {
+        overflow: visible;
+      }
+
+      [id$='img_adetailer_ad_toprow_prompt'] {
         margin-bottom: var(--spacing-lg);
       }
 
-      [id*='_adetailer_ad_detection_accordion'].block.padded.gradio-accordion,
-      [id*='_adetailer_ad_mask_preprocessing_accordion'].block.padded.gradio-accordion,
-      [id*='_adetailer_ad_inpainting_accordion'].block.padded.gradio-accordion {
+      [id$='_adetailer_ad_detection_accordion'].block.padded.gradio-accordion,
+      [id$='_adetailer_ad_mask_preprocessing_accordion'].block.padded.gradio-accordion,
+      [id$='_adetailer_ad_inpainting_accordion'].block.padded.gradio-accordion {
         margin: var(--spacing-lg) 0 !important;
         padding: 16px !important;
         border: 1px solid var(--block-border-color) !important;

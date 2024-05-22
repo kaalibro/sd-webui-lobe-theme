@@ -26,9 +26,6 @@ export default (token: Theme) => {
         width: 100%;
         height: var(--button-lg-tool-height) !important;
 
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
         border-radius: ${token.borderRadius}px;
       }
 

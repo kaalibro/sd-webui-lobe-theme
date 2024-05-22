@@ -28,7 +28,7 @@ export default (token: Theme) => css`
     background: ${token.colorBgElevated} !important;
     border: 1px solid ${token.colorBorder} !important;
     border-radius: ${token.borderRadius}px !important;
-    box-shadow: ${token.boxShadow};
+    box-shadow: var(--thumbnail-shadow) !important;
 
     li {
       overflow: hidden;
@@ -37,8 +37,6 @@ export default (token: Theme) => css`
       padding: 4px 8px !important;
 
       line-height: 1 !important;
-      text-overflow: ellipsis;
-      white-space: nowrap;
 
       border-radius: ${token.borderRadiusSM}px !important;
 
