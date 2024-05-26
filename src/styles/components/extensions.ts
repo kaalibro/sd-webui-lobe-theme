@@ -228,6 +228,13 @@ export default (token: Theme) => {
         }
       }
 
+      /* canvas-zoom */
+      #img2img_sketch,
+      #img2maskimg,
+      #inpaint_sketch {
+        box-shadow: var(--thumbnail-shadow);
+      }
+
       /* ComfyUI */
       #comfyui_webui_container {
         height: calc(100% - ${HEADER_HEIGHT}px) !important;
