@@ -1,3 +1,4 @@
+import { colors as colorScales } from '@lobehub/ui';
 import { createStyles } from 'antd-style';
 
 const TEXT2IMG_PROMPT_HEIGHT = 74;
@@ -11,6 +12,7 @@ export const useStyles = createStyles(
       layoutSplitPreview,
     }: { isPromptResizable: boolean; layoutSplitPreview: boolean },
   ) => {
+    const type = isDarkMode ? 'dark' : 'light';
     return {
       container: css`
         position: relative;
@@ -418,18 +420,18 @@ export const useStyles = createStyles(
         }
 
         [id$='2img_prompt'] > label > textarea {
-          color: var(--body-text-color);
+          color: ${isDarkMode ? colorScales.lime[type][9] : colorScales.green[type][11]};
 
           &:focus {
-            color: var(--body-text-color);
+            color: ${isDarkMode ? colorScales.lime[type][10] : colorScales.green[type][12]};
           }
         }
 
         [id$='2img_neg_prompt'] > label > textarea {
-          color: ${token.colorWarningTextHover};
+          color: ${isDarkMode ? colorScales.volcano[type][10] : colorScales.volcano[type][10]};
 
           &:focus {
-            color: ${token.colorWarning};
+            color: ${isDarkMode ? colorScales.volcano[type][11] : colorScales.volcano[type][11]};
           }
         }
 
